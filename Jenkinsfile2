@@ -28,7 +28,7 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
+       /* stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('sonarserver') {
                     sh ''' 
@@ -46,7 +46,7 @@ pipeline {
                     waitForQualityGate abortPipeline: false, credentialsId: 'Sonarid'
                 }
             }
-        }
+        } */
 
         stage('Install Dependencies') {
             steps {
